@@ -1,0 +1,28 @@
+{
+  "name": "pwasndbx",
+  "version": "1.0.0",
+  "description": "A PWA that utilizes Caches and Fetch to demontrate offline files uploading/deleting and syncing.",
+  "main": "index.js",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "dotenv": "^8.2.0",
+    "ejs": "^3.0.1",
+    "express": "^4.17.1",
+    "fast-glob": "^3.2.2",
+    "mime-types": "^2.1.26"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/clytras/pwa-sandbox.git"
+  },
+  "author": "",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/clytras/pwa-sandbox/issues"
+  },
+  "homepage": "https://github.com/clytras/pwa-sandbox#readme"
+}
