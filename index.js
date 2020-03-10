@@ -20,26 +20,13 @@ function fullUrl(req) {
 }
 
 app.use(cors({ origin: true }));
-  // .use(bodyParser.json())
-  // .use(bodyParser.urlencoded({ extended: false }))
-  // .use("/languages", require("./lib/languages/route"))
-
 app.use(express.static('public'));
 // app.engine('.ejs', require('ejs').renderFile);
 app.set('view engine', 'ejs');
 app.set('views', __dirname + '/views');
 
-
 app.get('/', async function(req, res) {
-  // res.send(`Hello World from express!!!!`);
-  res.render('layout', {
-    forFooter: null, // 'Testing var for footer!'
-    some: {
-      obj: {
-        var: 'Testing var'
-      }
-    }
-  });
+  res.render('layout');
 });
 
 app.get('/uploads', async function(req, res) {
@@ -117,8 +104,4 @@ app.delete('/uploads/:filename', async function(req, res) {
 
 app.get("*", (_, res) => res.status(404).json({ success: false, data: "Endpoint not found" }));
 
-
-
-// app.get('/', (req, res) => res.send('Hello World from express!!!!!'))
-
-app.listen(port, () => console.log(`Example app listening on port ${port}!`));
+app.listen(port, () => console.log(`Listening on port ${port}!`));
