@@ -48,6 +48,16 @@ self.addEventListener('activate', function(event) {
   console.log('SW:activate');
 });
 
+// self.addEventListener('sync', function(event) {
+//   console.log('SW:sync', event);
+
+//   if (event.tag == 'appFilesSync') {
+//     event.waitUntil(async () => {
+//       console.log('SW:sync:appFilesSync');
+//     });
+//   }
+// });
+
 /* Serve cached content when offline */
 
 self.addEventListener('fetch', function(event) {

@@ -2,6 +2,11 @@ document.addEventListener('DOMContentLoaded', function() {
 
   if ('serviceWorker' in navigator) {
     navigator.serviceWorker.register('sw.js', { scope: '/' });
+
+    // navigator.serviceWorker.ready.then(function(swRegistration) {
+    //   console.log('Register appFilesSync');
+    //   return swRegistration.sync.register('appFilesSync');
+    // });
   }
   
   let status = "";
